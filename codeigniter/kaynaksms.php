@@ -84,7 +84,7 @@ class Kaynaksms extends CI_Model {
 		$sonuc_parcala = explode( ' ', $sonuc );
 
 		// İşlem başarılı
-		if( $sonuc_parcala[0] === '00' && isset( $sonuc_parcala[1] ) ):
+		if( ( $sonuc_parcala[0] === '00' OR $sonuc_parcala[0] === '01' OR $sonuc_parcala[0] === '02' ) && isset( $sonuc_parcala[1] ) ):
 			// SMS ID'sini döndür
 			return $sonuc_parcala[1];
 
